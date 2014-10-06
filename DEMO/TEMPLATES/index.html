@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+</head>
+<body>
+	<label for="str_name">{{str_name}}</label> <br>
+	<label for="int_edad">{{int_edad}}</label> <br>
+	<label for="str_name">
+		{% for dato in tupla %}
+			{{dato}} <br>
+		{% endfor %}
+	</label>
+</body>
+</html>
