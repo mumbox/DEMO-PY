@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
-from forms import UserForm
-from django.Http import HttpResponseRedirect
+# from forms import UserForm
+# from django.Http import HttpResponseRedirect
 
 # Create your views here.
 def Index(request):
