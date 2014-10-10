@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'iconos';
+  src: url("FONTS/icomoon.eot?-8f1zu4");
+  src: url("FONTS/icomoon.eot?#iefix-8f1zu4") format('embedded-opentype'), url("FONTS/icomoon.woff?-8f1zu4") format('woff'), url("FONTS/icomoon.ttf?-8f1zu4") format('truetype'), url("FONTS/icomoon.svg?-8f1zu4#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  min-height: 100%;
+}
+.lg-user {
+  margin: 0 auto;
+  height: 40%;
+  width: 20%;
+  margin-top: 10%;
+}
+.imp-lg-top {
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+.imp-lg-bottom {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  text-aling: center;
+}
+.btn-section {
+  line-height: 3em;
+  padding: 1em;
+  text-align: center;
+}
+.btn-enter {
+  background: #fff;
+  border: 1px solid #c6c6c6;
+  border-radius: 50%;
+  color: #c6c6c6;
+  font-size: 20px;
+  padding: 10px;
+  text-decoration: none;
+}
+.btn-enter:after {
+  font-family: "iconos";
+  content: "\f061";
+}
+.btn-enter:hover {
+  text-decoration: none;
+  background: #09f;
+  border: none;
+  -webkit-animation: cl-change-azul 0.3s forwards;
+  color: #fff;
+}
+@-moz-keyframes cl-change-azul {
+  0%, 20% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes cl-change-azul {
+  0%, 20% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes cl-change-azul {
+  0%, 20% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes cl-change-azul {
+  0%, 20% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
