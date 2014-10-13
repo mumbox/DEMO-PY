@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} Inicio {% endblock %}
+{% block header %} {{str_name}} {% endblock %}
+{% block content %}
+	<p>Kelvin Contenido</p>
+	<ul>
+		{% for t in tupla %}
+			<li>{{t}}</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

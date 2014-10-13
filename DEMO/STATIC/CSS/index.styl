@@ -1,11 +1,11 @@
 // FUENTES
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?-8f1zu4');
-	src:url('../fonts/icomoon.eot?#iefix-8f1zu4') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?-8f1zu4') format('woff'),
-		url('../fonts/icomoon.ttf?-8f1zu4') format('truetype'),
-		url('../fonts/icomoon.svg?-8f1zu4#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?aq4iwl');
+	src:url('../fonts/icomoon.eot?#iefixaq4iwl') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?aq4iwl') format('woff'),
+		url('../fonts/icomoon.ttf?aq4iwl') format('truetype'),
+		url('../fonts/icomoon.svg?aq4iwl#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -15,7 +15,10 @@ plomoF2 = #f2f2f2
 plomoC6 = #c6c6c6
 plomo47 = #474747
 azul009 = #0099ff
+azul006 = #0068ad
+azul003 = #003d66
 rojoF22 = #f22f2f
+amarFFC = #ffce00
 
 html
 	width 100% !important
@@ -25,11 +28,81 @@ body
 	height 100% !important
 	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.13))); !important
 
+// HEADEAR
+.user-content
+	padding 10px
+	.user-data
+		display inline-block
+		line-height 5px
+		float right
+		text-align right
+		padding-top 10px
+		width 300px
+		.user-name
+			font-size 14px
+			color plomo
+			font-weight bold
+		.user-grade
+			font-size 12px
+			color gris2
+	.user-avatar
+		display inline-block
+		float right
+		width 50px
+		img
+			border-radius 50%
+			height 40px
+			margin-left 10px
+			width 40px
+			&:hover
+				opacity 0.8
+
+//MENU OPTIONS
+.menu-options
+	position absolute
+	height 100%
+	background azul006
+	padding 0 !important
+	box-shadow 3px 1px 0px 0px rgba(48, 50, 50, 0.26)
+	ul
+		.li-logo
+			color white
+			font-family "icomoon"
+			font-size 7em
+			text-align center
+			&:before
+				content "\e604"
+		.li-item
+			position relative
+			border-bottom azul003 solid 1px
+			margin-top 0px !important
+			&:hover
+				span
+					color amarFFC
+				// &:after
+				// 	border-bottom 10px solid transparent
+				// 	border-left 10px solid plomo47
+				// 	border-top 10px solid transparent
+				// 	content ""
+				// 	position absolute
+				// 	top 30%
+				// 	right -10px
+			a
+				color white
+				width 100%
+				&:hover
+					background-color azul003
+					border-radius 0
+			span
+				font-size 14px
+				margin-right 12px
+
+//LOGIN USER
 .lg-user
+	background white
+	height 100%
 	margin 0 auto
 	text-align center
-	height 65% !important
-	background rojoF22 !important
 
 .imp-lg-top
 	border-bottom-right-radius 0px !important
@@ -41,7 +114,7 @@ body
 	border-top-right-radius 0px !important
 
 .btn-section
-	height 35% !important
+	font-size 12px
 	text-align center
 	p
 		font-weight bold
@@ -49,22 +122,22 @@ body
 			color rojoF22
 			cursor default
 	a
+		color plomo47
 		font-weight bold
 		text-decoration none
-		color plomo47
 		&:hover
 			color azul009
 			text-decoration none
 
 .tit-form
 	display block
-	padding 2.5em
 	text-align center
+	height 6em
 
 .tit-section
 	position relative
-	height 7em 
-	margin-top 40% !important
+	height 8em 
+	margin-top 20%
 	.logos
 		position relative
 		margin 0 auto
@@ -92,7 +165,7 @@ body
 
 .btn-enter
 	color plomo47
-	font-size 4em
+	font-size 5em
 	font-family "icomoon"
 	&:before
 		content "\f0a9"
@@ -102,12 +175,17 @@ body
 		text-decoration none
 		-webkit-animation cl-change-azul 0.2s
 
+// RESPONSIVE
+@media screen and (max-width: 768px) {
+	// .lg-user{
+	// 	height 70%
+	// }
+	// .btn-section{
+	// 	height 30%
+	// }
+}
+
 // ANIAMCIONES
-// @keyframes logo-ani {
-// 	0%	{}
-
-// }
-
 @keyframes cl-change-azul {
 	0%,20%{
 		transform scale(0.0)
@@ -131,4 +209,43 @@ body
    	55%  	{ z-index: 0; opacity: 1; transform: scale(1.0)}
    	95% 	{ z-index: 0; opacity: 1; transform: scale(1.0)}
    	100% 	{ z-index: -1; opacity: 0; transform: scale(0.0)}
+}
+
+//PRUEBA CUBO
+.cubo-index 
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -20px;
+	opacity:1;
+
+.cube 
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	animation-name: rotatecube;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+.cube
+	div 
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+.front {transform: rotateY(0deg) translateZ(50px); }
+.right {transform: rotateY(90deg) translateZ(50px); }
+.left {transform: rotateY(-90deg) translateZ(50px);}
+.top {transform: rotateX(90deg) translateZ(50px); }
+.bottom {transform: rotateX(-90deg) translateZ(50px);}
+.back {transform: rotateX(180deg) translateZ(50px);}
+
+@keyframes rotatecube {
+	0% { transform: rotateY( 0 ) rotateX( 0 ) }
+	100% { transform: rotateY( 360deg ) rotateX( 360deg ) }
 }
