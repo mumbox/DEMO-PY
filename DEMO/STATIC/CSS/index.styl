@@ -13,59 +13,85 @@
 // COLORES
 plomoF2 = #f2f2f2
 plomoC6 = #c6c6c6
+plomo47 = #474747
 azul009 = #0099ff
 rojoF22 = #f22f2f
+
+html
+	width 100% !important
+	height 100% !important
+
 body
-	min-height 100%
+	height 100% !important
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.13))); !important
 
 .lg-user
 	margin 0 auto
-	margin-top 5%
+	text-align center
+	height 65% !important
+	background rojoF22 !important
 
 .imp-lg-top
 	border-bottom-right-radius 0px !important
 	border-bottom-left-radius 0px !important
-
+	border-bottom none !important
+	
 .imp-lg-bottom
 	border-top-left-radius 0px !important
 	border-top-right-radius 0px !important
-	text-aling center
 
 .btn-section
-	line-height 3em
-	padding 1.5em
+	height 35% !important
+	text-align center
+	p
+		font-weight bold
+		&:hover
+			color rojoF22
+			cursor default
+	a
+		font-weight bold
+		text-decoration none
+		color plomo47
+		&:hover
+			color azul009
+			text-decoration none
+
+.tit-form
+	display block
+	padding 2.5em
 	text-align center
 
 .tit-section
 	position relative
-	height 10em
-	overflow hidden
+	height 7em 
+	margin-top 40% !important
 	.logos
 		position relative
 		margin 0 auto
+		display block
 	div
 		border-radius 50%
 		color white
-		font-size 80px
+		font-size 2.5em
 		font-family "icomoon"
 		text-align center
 		position absolute
-		width 120px
+		width 130px
 
 .edu-logo-book
 	background azul009
-	-webkit-animation opacity-change-book 10s linear infinite
+	-webkit-animation opacity-change-book 5s linear infinite
 	&:before
 		content "\f02d"
 
 .edu-logo-hat
 	background rojoF22
-	-webkit-animation opacity-change-hat 10s linear infinite
+	-webkit-animation opacity-change-hat 5s linear infinite
 	&:before
 		content "\f19d"
 
 .btn-enter
-	color plomoC6
+	color plomo47
 	font-size 4em
 	font-family "icomoon"
 	&:before
@@ -77,6 +103,11 @@ body
 		-webkit-animation cl-change-azul 0.2s
 
 // ANIAMCIONES
+// @keyframes logo-ani {
+// 	0%	{}
+
+// }
+
 @keyframes cl-change-azul {
 	0%,20%{
 		transform scale(0.0)

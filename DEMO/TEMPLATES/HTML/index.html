@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html ng-app>
 	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
-		<link rel="stylesheet" href="CSS/index.css">
-		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+		{% load staticfiles %}
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<meta charset="UTF-8">
 		<title>Index</title>
 	</head>
 	<body>
-		<div class="lg-user">
-			<h2>Logeo de usuario</h2>
-			<input type="email" class="form-control imp-lg-top" id="exampleInputEmail1" placeholder="Ingrese el Usuario">
-			<input type="email" class="form-control imp-lg-bottom" id="exampleInputEmail1" placeholder="Ingrese la Contrase&ntilde;a">
-			<a href="#" class="btn-enter">HOLA QUE HACE</a>
+		<div class="lg-user col-md-2 col-md-offset-5 col-xs-6 col-xs-offset-3">
+			<section class="tit-section">
+				<div class="logos">
+					<div class="edu-logo-book"></div>
+					<div class="edu-logo-hat"></div>
+				</div>
+			</section>
+			<div class="tit-form">
+				<h2>Bienvenido <kbd> {{str_name}} </kbd></h2>	
+			</div>
+			<section class="ctn-section">
+				<div class="form-group">
+					<input type="email" class="form-control imp-lg-top" id="exampleInputEmail1" placeholder="Ingrese el Usuario">
+					<input type="email" class="form-control imp-lg-bottom" id="exampleInputEmail1" placeholder="Ingrese la Contrase&ntilde;a">
+				</div>	
+			</section>
 		</div>
+		<section class="btn-section col-xs-12">
+			<a href="#" class="btn-enter"></a>
+			<br>
+			<a href="#">Olvido la contrase&ntilde;a <kbd>?</kbd></a>
+			<p><kbd>Adbox</kbd> caja de administraci&oacute;n</p>
+		</section>
 		<!-- <div>
       		<label>Name:</label>
       		<input type="text" ng-model="yourName" placeholder="Enter a name here">

@@ -5,6 +5,3 @@ class UserForm(forms.ModelForm):
 	
 	class Meta(object):
 		model = User
-		
-			
-			
