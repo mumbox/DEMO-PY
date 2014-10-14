@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="es" ng-app="app">
-	<head ng-app>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
-		<script src="js/script.js"></script>
+<html lang="es">
+	<head>
+		<script src="../../static/js/angular.min.js"></script>
+		<script src="../../static/js/script.js"></script>
 		<link rel="stylesheet" href="../../static/css/index.css">
 		<link rel="stylesheet" href="../../static/css/bootstrap.
 		min.css">
 	</head>
 	<body>
-		<div class="lg-user col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
+		<!-- <div class="lg-user col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
 			<section class="tit-section">
-				<!-- <img src="../img/logo-adbox.png" alt=""> -->
+				<img src="../img/logo-adbox.png" alt="">
 				<div class="logos">
 					<div class="edu-logo-book"></div>
 					<div class="edu-logo-hat"></div>
@@ -29,16 +29,40 @@
 			<br>
 			<a href="#">Olvido la contrase&ntilde;a <kbd>?</kbd></a>
 			<p><kbd>Adbox</kbd> caja de administraci&oacute;n</p>
-		</div>
-		<!-- <div>
+		</div> -->
+		<div ng-app="app">
+			<div ng-controller="ContController">
+				<button ng-click="add(1)" >+</button>
+				<button ng-click="subtract(1)">-</button>
+				<h1>Contador: {{ cont }}</h1>
+			</div>
+			<hr>
+			<div ng-controller="HoraControler" >
+				<h3>{{ clock }}</h3>
+			</div>
+			<div ng-controller="PruebaController">
+				<h1>{{mensaje}}</h1>
+			</div>
+			{{user.email}}
 	  		<label>Name:</label>
 	  		<input type="text" ng-model="yourName" placeholder="Enter a name here">
 	  		<hr>
-	  	<h1>Hello {{yourName}}!</h1>
+	  		<h1>Hello {{yourName}}!</h1>
+	  		<input type="text" ng-model="yourName" placeholder="Enter a name here">
+		  	<hr>
+		  	<h1>Hello {{yourName}} !</h1>
+		  	<h1>{{mensaje}}</h1>
+		  	<button ng-click="runWhenButtonClicked()">Haz click sobre mi</button>
+		  	<div ng-click="runWhenDivClicked()">
+		  	<h3>{{retorno}}</h3>
+		  	<a ng-click="shouldShowDiv = !shouldShowDiv">Show content below</a>
+			<div ng-show="shouldShowDiv">Este div solo se mostrara si <em>shouldShowDiv</em> es true</div>
+			<div ng-hide="shouldShowDiv">Este div se ocultara <em>shouldShowDiv</em> no es true</div>
+			<hr>
+			<div ng-init="count = 0">
+			 	<a ng-click="count = count + 1">Add one</a>
+			  	<h3>Double the count is: {{ count }}</h3>
+			</div>
 		</div>
-		<input type="text" ng-model="yourName" placeholder="Enter a name here">
-	  	<hr>
-	  	<h1>Hello {{yourName}} !</h1>
-	  	<h1>{{mensaje}}</h1> -->
 	</body>
 </html>
