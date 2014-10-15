@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Adbox - {% block title %}{% endblock %}</title>
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/component.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/modernizr.custom.js"></script>
 </head>
-<body>
-	<section class="col-xs-12 col-sm-2 menu-options">
+<body class="body-base">
+	<!-- <section class="col-xs-12 col-sm-2 menu-options">
 		<ul class="nav nav-pills nav-stacked">
 			<li class="li-logo">
 				<p class="p1"></p>
@@ -21,16 +23,91 @@
 			<li class="li-item"><a href=""><span class="glyphicon glyphicon-shopping-cart"></span>Compra</a></li>
 			<li class="li-item"><a href=""><span class="glyphicon glyphicon-log-out"></span>Salir</a></li>
 		</ul>
-	</section>
-	<section class="col-xs-12 col-sm-10 user-content">
+	</section> -->
+	<section class="col-xs-12 col-sm-12 user-content">
+		<div class="logo-adbox">
+			<a class="ico-hat icon-menu"></a>
+			<!-- <a class="ico-foco icon-menu"></a> -->
+			<h1>Adbox</h1>
+		</div>
 		<div class="user-avatar">
-			<img src="img/mumbox.png" alt="">
+			<!-- <img src="img/mumbox.png" alt=""> -->
 		</div>
 		<div class="user-data">
 			<p class="user-name">Kelvin Arnold Flores Ticona</p>
 			<p class="user-grade">Gerente de Area</p>
 		</div>
 	</section>
+	<div class="col-xs-12 main">
+		<nav class="cbp-hsmenu-wrapper" id="cbp-hsmenu-wrapper">
+			<div class="cbp-hsinner">
+				<ul class="cbp-hsmenu">
+					<li><a href="">
+						<span class="ico-home icon-menu"></span>
+						</a></li>
+					<li>
+						<a href="#">Personas</a>
+						<ul class="cbp-hssubmenu">
+							<li><a href="#"><p class="ico-apod icon-menu"></p><span>Apoderado</span></a></li>
+							<li><a href="#"><p class="ico-student icon-menu"></p><span>Estudiantes</span></a></li>
+							<li><a href="#"><p class="ico-teacher icon-menu"></p><span>Docentes</span></a></li>
+							<li><a href="#"><p class="ico-nurse icon-menu"></p><span>Enfermer&iacute;a</span></a></li>
+							<li><a href="#"><p class="ico-per-general icon-menu"></p><span>Personal</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Programa Acad&eacute;mico</a>
+						<ul class="cbp-hssubmenu cbp-hssub-rows">
+							<li><a href="#"><p class="ico-scholl	 icon-menu"></p><span>Colegios</span></a></li>
+							<li><a href="#"><p class="ico-shield icon-menu"></p><span>Sedes</span></a></li>
+							<li><a href="#"><p class="ico-star icon-menu"></p><span>Niveles</span></a></li>
+							<li><a href="#"><p class="ico-rocket icon-menu"></p><span>Grados</span></a></li>
+							<li><a href="#"><p class="ico-lab icon-menu"></p><span>Areas Eduat&iacute;vas</span></a></li>
+							<li><a href="#"><p class="ico-archive icon-menu"></p><span>Cursos</span></a></li>
+							<li><a href="#"><p class="ico-lap icon-menu"></p><span>Planes de Estudio</span></a></li>
+							<li><a href="#"><p class="ico-book icon-menu"></p><span>Periodos</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Programaci&oacute;n Horaria</a>
+						<ul class="cbp-hssubmenu">
+							<li><a href="#"><p class="ico-build icon-menu"></p><span>Pabellones</span></a></li>
+							<li><a href="#"><p class="ico-windows icon-menu"></p><span>Aulas</span></a></li>
+							<li><a href="#"><p class="ico-teacher icon-menu"></p><span>Panel Docente</span></a></li>
+							<li><a href="#"><p class="ico-calendar icon-menu"></p><span>Disponibilidad Docente</span></a></li>
+							<li><a href="#"><p class="ico-pencil icon-menu"></p><span>Crear Secciones</span></a></li>
+							<li><a href="#"><p class="ico-book icon-menu"></p><span>Programar Secciones</span></a></li>
+							<li><a href="#"><p class="ico-search icon-menu"></p><span>Consultas</span></a></li>
+							<li><a href="#"><p class="ico-clock icon-menu"></p><span>Mi Horario</span></a></li>
+						</ul>
+					</li>
+					<li><a href="#">Calificaciones</a>
+						<ul class="cbp-hssubmenu">
+							<li><a href="#"><p class="ico-book2 icon-menu"></p><span>Registro de Notas</span></a></li>
+							<li><a href="#"><p class="ico-search-plus icon-menu"></p><span>Consulta Notas</span></a></li>
+							<li><a href="#"><p class="ico-field-text icon-menu"></p><span>Boleta Notas</span></a></li>
+							<li><a href="#"><p class="ico-ranking icon-menu"></p><span>Ranking Alumnos</span></a></li>
+							<li><a href="#"><p class="ico-unlink icon-menu"></p><span>Proceso Anulación</span></a></li>
+							<li><a href="#"><p class="ico-box icon-menu"></p><span>Proceso Cierre</span></a></li>
+						</ul>
+					</li>
+					<li><a href="#">Asistencias</a>
+						<ul class="cbp-hssubmenu">
+							<li><a href="#"><p class="ico-pencil icon-menu"></p><span>Registro Asistencia</span></a></li>
+							<li><a href="#"><p class="ico-heart icon-menu"></p><span>Regularizaci&oacute;n Asistencia</span></a></li>
+							<li><a href="#"><p class="ico-book3 icon-menu"></p><span>Consulta Asistencias</span></a></li>
+							<li><a href="#"><p class="ico-student icon-menu"></p><span>Ver Alumnos</span></a></li>
+							<li><a href="#"><p class="ico-teacher icon-menu"></p><span>Asistencia Docentes</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<script src="js/cbpHorizontalSlideOutMenu.min.js"></script>
+	<script>
+		var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
+	</script>
 	<!-- <section class="col-sm-10 col-sm-offset-2">
 		<section class="cubo-index">
 			<div class="cube">
@@ -43,11 +120,11 @@
 			</div>
 		</section>
 	</section> -->
-	<!-- <section class="content">
+	<section class="content">
 		{% block content %}{% endblock %}
 	</section>
 	<footer>
 		<p>Prueba Plantillas</p>
-	</footer> -->
+	</footer>
 </body>
 </html>

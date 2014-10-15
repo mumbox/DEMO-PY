@@ -12,4 +12,4 @@ def Index(request):
 		'int_edad':int_edad,
 		'tupla':tupla
 	}
-	return render_to_response('demo.html',context)
+	return render_to_response('index.html',context)
