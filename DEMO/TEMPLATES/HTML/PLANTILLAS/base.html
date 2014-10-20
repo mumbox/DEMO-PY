@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script src="js/modernizr.custom.js"></script>
 </head>
-<body class="body-base">
+<body class="body-system">
 	<!-- <section class="col-xs-12 col-sm-2 menu-options">
 		<ul class="nav nav-pills nav-stacked">
 			<li class="li-logo">
@@ -26,7 +26,7 @@
 	</section> -->
 	<section class="col-xs-12 col-sm-12 user-content">
 		<div class="logo-adbox">
-			<a class="ico-hat icon-menu"></a>
+			<!-- <a class="ico-hat icon-menu"></a> -->
 			<!-- <a class="ico-foco icon-menu"></a> -->
 			<h1>Adbox</h1>
 		</div>
@@ -42,7 +42,7 @@
 		<nav class="cbp-hsmenu-wrapper" id="cbp-hsmenu-wrapper">
 			<div class="cbp-hsinner">
 				<ul class="cbp-hsmenu">
-					<li><a href="">
+					<li><a href="{% url 'Index' %}">
 						<span class="ico-home icon-menu"></span>
 						</a></li>
 					<li>
@@ -123,8 +123,8 @@
 	<section class="content">
 		{% block content %}{% endblock %}
 	</section>
-	<footer>
+	<!-- <footer>
 		<p>Prueba Plantillas</p>
-	</footer>
+	</footer> -->
 </body>
 </html>

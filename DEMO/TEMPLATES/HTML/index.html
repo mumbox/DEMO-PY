@@ -9,14 +9,26 @@
 		<meta charset="UTF-8">
 		<title>Index</title>
 	</head>
-	<div class="body-ini-z100"></div>
-	<body class="body-ini">
+	<body class="body-index">
 		<div class="lg-user col-md-2 col-md-offset-5 col-xs-6 col-xs-offset-3">
 			<section class="tit-section">
 				<div class="logos">
 					<div class="edu-logo-lab"></div>
 					<div class="edu-logo-hat"></div>
 				</div>
+				<!-- <div class="contenedor">
+				<div class="ani-cubo">
+					<div class="cara cara1"></div>
+					<div class="cara cara1t"></div>
+				    <div class="cara cara2"></div>
+				    <div class="cara cara2t"></div>
+				    <div class="cara cara4"></div>
+				    <div class="cara cara4t"></div>
+				    <div class="cara cara5"></div>
+				    <div class="cara cara5t"></div>
+				    <div class="cara cara6"></div>
+				</div>
+				</div> -->
 			</section>
 			<div class="tit-form">
 				<h2>Bienvenido <kbd> {{str_name}} </kbd></h2>
@@ -26,7 +38,7 @@
 					<input type="email" class="form-control imp-lg-top" id="exampleInputEmail1" placeholder="Ingrese el Usuario">
 					<input type="email" class="form-control imp-lg-bottom" id="exampleInputEmail1" placeholder="Ingrese la Contrase&ntilde;a">
 				</div>
-				<buttom href="#" class="btn-enter"></buttom>
+				<a href="{% url 'MenuMain' %}" class="btn-enter"></a>
 			</section>
 			<section class="btn-section">
 				<a href="#">Olvido la contrase&ntilde;a <kbd>?</kbd></a>

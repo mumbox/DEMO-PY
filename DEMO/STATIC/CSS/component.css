@@ -51,7 +51,7 @@
 .cbp-hsmenu > li > a {
 	color: #fff;
 	font-size: 1em;
-	line-height: 2.5em;
+	line-height: 3em;
 	display: inline-block;
 	position: relative;
 	z-index: 10000;
@@ -61,10 +61,11 @@
 .cbp-hsmenu > li > a > span{
 	font-size: 2em;
 	position:  absolute;
-	margin-top: -0.8em;
-	background: #003d66;
-	width: 1.2em;
+	margin-top: -0.94em;
+	background: #474747;
+	width: 1.5em;
 	text-align: center;
+	border-radius: 50%;
 }
 
 .no-touch .cbp-hsmenu > li > a:hover,
@@ -125,10 +126,9 @@
 .cbp-hssubmenu:before, 
 .cbp-hssubmenu:after { 
 	content: " ";
-	display: table; 
 }
 .cbp-hssubmenu:after { 
-	clear: both; 
+	clear: both;
 }
 
 /* Let's allow 6 item in a row */
@@ -191,7 +191,7 @@
 
 /* Helper div for animating the background */
 .cbp-hsmenubg {
-	background: #f7f7f7;
+	background: white;
 	position: absolute;
 	width: 100%;
 	top: 100%;
@@ -204,6 +204,8 @@
 	-webkit-transition: height 0.3s;
 	-moz-transition: height 0.3s;
 	transition: height 0.3s;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 
 @media screen and (max-width: 65em){
@@ -239,6 +241,7 @@
 	}
 	.cbp-hsmenu > li > a > span{
 		position:  relative;
+		background: transparent;
 	}
 	.cbp-hsmenu > li > a:not(:only-child):before {
 		line-height: 1.8;

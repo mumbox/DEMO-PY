@@ -8,7 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^APP/$', 'APP.views.Index', name='Index'),
-    url(r'^LOGIN/', 'APP.views.Login', name='Login'),
+    url(r'^MAIN/$', 'APP.views.MenuMain', name='MenuMain'),
     url(r'^admin/', include(admin.site.urls)),
     # Static
 	(r'css/(?P<path>.*)$', 'django.views.static.serve',

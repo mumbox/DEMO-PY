@@ -12,4 +12,10 @@ def Index(request):
 		'int_edad':int_edad,
 		'tupla':tupla
 	}
+	return render_to_response('index.html',context)
+
+def MenuMain(request):
+	context	= {
+		'str_menu':'Hola Menu'
+	}
 	return render_to_response('demo.html',context)
