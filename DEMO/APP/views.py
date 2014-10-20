@@ -16,6 +16,30 @@ def Index(request):
 
 def MenuMain(request):
 	context	= {
-		'str_menu':'Hola Menu'
+		'str_titulo':'MENU PRINCIPAL'
 	}
 	return render_to_response('demo.html',context)
+
+def MntApoderado(request):
+	apotupla = ({'tid':1,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':2,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':3,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':4,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':5,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':6,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':7,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':8,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':9,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':10,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':11,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':12,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':13,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
+				{'tid':14,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3}
+		)
+	context	= {
+		'ar_apoderados':apotupla,
+		'str_titulo':'PERSONAS - APODERADOS'
+	}
+	return render_to_response('demo2.html',context)
+
+		

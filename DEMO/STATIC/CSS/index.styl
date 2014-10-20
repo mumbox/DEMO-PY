@@ -25,6 +25,7 @@ rojoF22 = #f22f2f
 amarFFC = #ffce00
 cyan009	= #0092f4
 cyan001 = #f4faff
+naraFE9 = #fe9003
 
 html
 	min-width 100% !important
@@ -34,25 +35,16 @@ html
 
 .body-index
 	height 100%
-	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,azul006), color-stop(100%,rgba(azul003,1))) !important
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,azul006), color-stop(100%,rgba(azul003,1))) fixed !important
 
 .body-system
 	height 100%
-	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,azul006), color-stop(100%,rgba(azul003,1))) !important
-	// background white
-	// background -webkit-gradient(linear, left top, left bottom, color-stop(0%,white), color-stop(100%,rgba(cyan001,1))) !important
-
-// .body-ini-z100
-// 	height 100%
-// 	width 100%
-// 	z-index 4
-// 	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,azul003), color-stop(100%,rgba(0,0,0,0.13))); !important
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,azul006), color-stop(100%,rgba(azul003,1))) fixed !important
 
 // HEADEAR
 .user-content
 	color white
-	padding 1em
-	// background -webkit-gradient(linear, left top, left bottom, color-stop(0%,azul006), color-stop(100%,rgba(azul003,0.9))) !important
+	padding 0.5em
 	.logo-adbox
 		background transparent
 		border-radius 5px
@@ -60,7 +52,7 @@ html
 		float left
 		min-width 20%
 		position relative
-		padding 1em
+		padding 0.5em
 		text-align center
 		a
 			color white
@@ -91,11 +83,6 @@ html
 		margin-left 10px
 		border-radius 50%
 		border 1px dashed white
-		// img
-		// 	border-radius 50%
-		// 	height 40px
-		// 	margin-left 10px
-		// 	width 40px
 		&:hover
 			opacity 0.8
 
@@ -128,14 +115,6 @@ html
 			&:hover
 				span
 					color amarFFC
-				// &:after
-				// 	border-bottom 10px solid transparent
-				// 	border-left 10px solid plomo47
-				// 	border-top 10px solid transparent
-				// 	content ""
-				// 	position absolute
-				// 	top 30%
-				// 	right -10px
 			a
 				color white
 				width 100%
@@ -265,6 +244,18 @@ html
 .ico-home
 	&:before
 		content "\e63c"
+.ico-view
+	&:before
+		content "\e61b"
+	
+.ico-update
+	&:before
+		content "\e62e"
+	
+.ico-delete
+	&:before
+		content "\e612"
+
 //LOGIN USER
 .lg-user
 	height 100%
@@ -346,11 +337,103 @@ html
 		text-decoration none
 		-webkit-animation cl-change-btn 0.2s
 
+//WORK AREA
+.main-tit
+	background white
+	padding 0.5em
+	text-align center
+	font-weight bold
+	z-index 20
+
+.ico-table
+	font-family "icomoon"
+	font-size 1.5em
+	color plomoC6
+
+.work-area
+	margin 2em
+	
+.rpt
+	margin 0 auto
+	background white
+	padding 2em
+	border-radius 5px
+	box-shadow 2px 2px 0px plomo47
+	table
+		// font-family 'Ubuntu', sans-serif !important
+		margin 0 auto
+		font-size 11px
+		width 100%
+		tbody
+			color plomo47
+			tr
+				td
+					text-align center
+					padding 0.3em
+					border-left 1px solid plomoC6
+					&:first-child
+						border 1px solid plomo28
+						background plomo28
+						color white
+					.ico-update
+						&:hover
+							color plomo28
+					.ico-view
+						&:hover
+							color plomo28
+					.ico-delete
+						&:hover
+							color rojoF22
+				&:nth-child(odd)
+					background rgba(plomoF2,0.4)
+				&:hover
+					color plomo14
+				&:hover .ico-id
+					color amarFFC
+				&:hover .th-tit
+					color amarFFC
+		thead
+			border-radius 5px
+			border-bottom 1px solid plomoC6
+			font-size 12px
+			color plomo14
+			width 100%
+			tr
+				th
+					text-align center
+					padding 1em
+.btn-action
+	background white
+
+.on-tooltip
+	position relative
+	span
+		margin-left 10px
+		position absolute
+		background plomo14
+		border-radius 3px
+		padding 0.5em
+		color white
+		font-size 10px
+		width 100px
+		opacity 0
+		&:before
+			border-bottom 5px solid transparent
+			border-right 5px solid plomo14
+			border-top 5px solid transparent
+			content ""
+			position absolute
+			left -5px
+	&:hover span
+		opacity 1
+		-webkit-transition opacity 1s
+
+	  		
 //MENU INDEX
 .main-menu
 	padding 5em
 	width 100%
-	margin-top 3em
+
 .main-menu-items
 	margin 0 auto
 	margin-top 3em
@@ -368,7 +451,8 @@ html
 			div
 				display inline-block
 			&:hover .li-text
-				color amarFFC
+				a
+					color amarFFC
 			&:hover .li-item
 				background amarFFC
 				-webkit-animation cl-change-btn 0.2s
@@ -384,6 +468,8 @@ html
 			border-radius 5%
 			background plomo28
 			float right
+			a
+				color white
 			p
 				color white
 				padding 1em

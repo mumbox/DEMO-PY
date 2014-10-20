@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^APP/$', 'APP.views.Index', name='Index'),
     url(r'^MAIN/$', 'APP.views.MenuMain', name='MenuMain'),
+    url(r'^MNT/APO/$', 'APP.views.MntApoderado', name='MntApoderado'),
     url(r'^admin/', include(admin.site.urls)),
     # Static
 	(r'css/(?P<path>.*)$', 'django.views.static.serve',

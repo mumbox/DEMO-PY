@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %} Inicio 2 {% endblock %}
+{% block header %} {{str_name}} {% endblock %}
+{% block content %}
+	<section class="work-area col-xs-10 col-xs-offset-1">
+		<div class="rpt-personas rpt">
+			<table>
+				<thead>
+					<tr>
+						<th class="btn-action"></th>
+						<th>Tipo Doc.</th>
+						<th>Nro. Documento</th>
+						<th>Nombres</th>
+						<th>Estado</th>
+						<th>Pagos Pendientes</th>
+						<th>Hijos</th>
+						<th class="btn-action"></th>
+						<th class="btn-action"></th>
+						<th class="btn-action"></th>
+					</tr>
+				</thead>
+				<tfoot></tfoot>
+				<tbody>
+					{% for apo in ar_apoderados %}
+						<tr>
+							<td class="ico-id">{{apo.tid}}</td>
+							<td>{{apo.tdoc}}</td>
+							<td>{{apo.nrodoc}}</td>
+							<td class="apo-nom">{{apo.nomco}}</td>
+							<td>{{apo.estado}}</td>
+							<td>{{apo.pagpen}}</td>
+							<td>{{apo.nrohijos}}</td>
+							<td>
+								<a href="" class="ico-table ico-update"></a>
+							</td>
+							<td>
+								<a href="" class="ico-table ico-view"></a>
+							</td>
+							<td class="on-tooltip">
+								<a href="" class="ico-table ico-delete"></a>
+								<span>Eliminar Persona</span>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</section>
+{% endblock %}
