@@ -18,7 +18,7 @@ def MenuMain(request):
 	context	= {
 		'str_titulo':'MENU PRINCIPAL'
 	}
-	return render_to_response('demo.html',context)
+	return render_to_response('menu.html',context)
 
 def MntApoderado(request):
 	apotupla = ({'tid':1,'tdoc':'DNI','nrodoc':'46484104','nomco':'KELVIN ARNOLD FLORES TICONA','estado':'A','pagpen':'NO','nrohijos':3},
@@ -40,6 +40,6 @@ def MntApoderado(request):
 		'ar_apoderados':apotupla,
 		'str_titulo':'PERSONAS - APODERADOS'
 	}
-	return render_to_response('demo2.html',context)
+	return render_to_response('mntapoderado.html',context)
 
 		

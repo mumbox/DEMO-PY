@@ -21,6 +21,9 @@
 				</thead>
 				<tfoot></tfoot>
 				<tbody>
+					<script type="text/javascript">
+						$(function () { $('[data-toggle="tooltip"]').tooltip(); });
+					</script>
 					{% for apo in ar_apoderados %}
 						<tr>
 							<td class="ico-id">{{apo.tid}}</td>
@@ -31,16 +34,13 @@
 							<td>{{apo.pagpen}}</td>
 							<td>{{apo.nrohijos}}</td>
 							<td class="on-tooltip">
-								<a href="" class="ico-table ico-update"></a>
-								<span class="tooltip-left">Modificar Persona</span>
+								<a href="" class="ico-table ico-update" data-toggle="tooltip" data-placement="left" title="Modificar"></a>
 							</td>
 							<td class="on-tooltip">
-								<a href="" class="ico-table ico-view"></a>
-								<span class="tooltip-bottom">Visualizar Persona</span>
+								<a href="" class="ico-table ico-view" data-toggle="tooltip" data-placement="top" title="Visualizar"></a>
 							</td>
 							<td class="on-tooltip">
-								<a href="" class="ico-table ico-delete"></a>
-								<span class="tooltip-rigth">Eliminar Persona</span>
+								<a href="" class="ico-table ico-delete" data-toggle="tooltip" data-placement="right" title="Eliminar"></a>
 							</td>
 						</tr>
 					{% endfor %}
