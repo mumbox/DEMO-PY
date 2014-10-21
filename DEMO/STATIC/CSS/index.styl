@@ -408,15 +408,16 @@ html
 .on-tooltip
 	position relative
 	span
-		margin-left 10px
 		position absolute
 		background plomo14
 		border-radius 3px
+		margin-left 10px
 		padding 0.5em
 		color white
 		font-size 10px
-		width 100px
+		width 60px
 		opacity 0
+		z-index 0
 		&:before
 			border-bottom 5px solid transparent
 			border-right 5px solid plomo14
@@ -424,10 +425,12 @@ html
 			content ""
 			position absolute
 			left -5px
+		&:span
+			opacity 0
 	&:hover span
 		opacity 1
-		-webkit-transition opacity 1s
-
+		z-index 10
+		-webkit-transition opacity 2s
 	  		
 //MENU INDEX
 .main-menu
